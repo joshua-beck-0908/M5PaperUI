@@ -4,7 +4,7 @@
 #include "DSEG7_Classic_Mini_Regular_60.h"
 #include "frame.h"
 #include "SPIFFS.h"
-#include "funny_quotes.h"
+#include "prog_quotes.h"
 #include <WiFi.h>
 #include <esp_wifi.h>
 
@@ -1897,10 +1897,10 @@ bool refreshCallback(UiButton *btn, int event)
 
 const String randomQuote()
 {
-    int index = random(sizeof(funnyQuotes) / sizeof(String));
+    int index = random(sizeof(progQuotes) / sizeof(String));
     debug("Random quote index: " + String(index));
-    debug("Random quote: " + funnyQuotes[index]);
-    return funnyQuotes[index];
+    debug("Random quote: " + progQuotes[index]);
+    return progQuotes[index];
 }
 
 bool setQuote(UiButton *btn, int event)
