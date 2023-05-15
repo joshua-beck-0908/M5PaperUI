@@ -1,0 +1,87 @@
+\hypertarget{classUiManager}{}\doxysection{Ui\+Manager Class Reference}
+\label{classUiManager}\index{UiManager@{UiManager}}
+
+
+Inheritance diagram for Ui\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classUiManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ui\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classUiManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiManager_a63abda1b2df04ba239cb2b0ef11bd30e}\label{classUiManager_a63abda1b2df04ba239cb2b0ef11bd30e}} 
+{\bfseries Ui\+Manager} (M5\+EPD\+\_\+\+Canvas $\ast$parent\+Surface)
+\item 
+\mbox{\Hypertarget{classUiManager_abd76e0e59eb1a02dfb8c27180c26e295}\label{classUiManager_abd76e0e59eb1a02dfb8c27180c26e295}} 
+void {\bfseries add\+Modal} (\mbox{\hyperlink{classUiModal}{Ui\+Modal}} $\ast$modal=NULL)
+\item 
+\mbox{\Hypertarget{classUiManager_a885ca1c14b39d6dccd137e3e80a82bad}\label{classUiManager_a885ca1c14b39d6dccd137e3e80a82bad}} 
+void {\bfseries msgbox} (String title, String message)
+\item 
+\mbox{\Hypertarget{classUiManager_a46c2bed00fc0bd3c56c8a4dc854adf70}\label{classUiManager_a46c2bed00fc0bd3c56c8a4dc854adf70}} 
+void {\bfseries confirm} (String title, String message)
+\item 
+\mbox{\Hypertarget{classUiManager_a0c5bb0b945f7fb353746ce6daea82445}\label{classUiManager_a0c5bb0b945f7fb353746ce6daea82445}} 
+void {\bfseries update\+Display} ()
+\item 
+bool \mbox{\hyperlink{classUiManager_aff7423aa002e53003609be15cccb05f2}{touch\+Event}} (int x, int y) override
+\begin{DoxyCompactList}\small\item\em Called when the object is touched by the user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUiManager_a9addcbb8b673b9c378a642d0b90a4767}\label{classUiManager_a9addcbb8b673b9c378a642d0b90a4767}} 
+void {\bfseries sleep\+Until\+Touch} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiManager_ac24d3fb27382a67a32bdfbe4c4ceaa5f}\label{classUiManager_ac24d3fb27382a67a32bdfbe4c4ceaa5f}} 
+\mbox{\hyperlink{classUiModal}{Ui\+Modal}} $\ast$ {\bfseries modal} = NULL
+\item 
+\mbox{\Hypertarget{classUiManager_a9ce0e1d14a55da0aaf69a4abbfcb6abf}\label{classUiManager_a9ce0e1d14a55da0aaf69a4abbfcb6abf}} 
+unsigned long {\bfseries last\+Display\+Update} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUiManager_aff7423aa002e53003609be15cccb05f2}\label{classUiManager_aff7423aa002e53003609be15cccb05f2}} 
+\index{UiManager@{UiManager}!touchEvent@{touchEvent}}
+\index{touchEvent@{touchEvent}!UiManager@{UiManager}}
+\doxysubsubsection{\texorpdfstring{touchEvent()}{touchEvent()}}
+{\footnotesize\ttfamily bool Ui\+Manager\+::touch\+Event (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the object is touched by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate on the object that was touched. \\
+\hline
+{\em y} & The y coordinate on the object that was touched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUiFrame_a8bd6527bc8b93cda7eec7d55dd481adf}{Ui\+Frame}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main.\+cpp\end{DoxyCompactItemize}

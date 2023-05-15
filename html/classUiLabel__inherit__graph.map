@@ -1,0 +1,9 @@
+<map id="UiLabel" name="UiLabel">
+<area shape="rect" id="node1" title="A simple label object." alt="" coords="57,80,123,107"/>
+<area shape="rect" id="node3" href="$classUiButton.html" title="A button control with a callback function." alt="" coords="5,155,79,181"/>
+<area shape="rect" id="node4" href="$classUiFrame.html" title=" " alt="" coords="103,155,175,181"/>
+<area shape="rect" id="node2" href="$classUiObj.html" title=" " alt="" coords="63,5,117,32"/>
+<area shape="rect" id="node5" href="$classUiIcon.html" title=" " alt="" coords="12,229,72,256"/>
+<area shape="rect" id="node6" href="$classUiManager.html" title=" " alt="" coords="97,229,182,256"/>
+<area shape="rect" id="node7" href="$classUiModal.html" title=" " alt="" coords="207,229,277,256"/>
+</map>

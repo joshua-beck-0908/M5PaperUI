@@ -1,0 +1,200 @@
+\hypertarget{classUiFrame}{}\doxysection{Ui\+Frame Class Reference}
+\label{classUiFrame}\index{UiFrame@{UiFrame}}
+
+
+Inheritance diagram for Ui\+Frame\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classUiFrame__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ui\+Frame\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classUiFrame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiFrame_a7d232a29c3a83f5753e62c8d8053deae}\label{classUiFrame_a7d232a29c3a83f5753e62c8d8053deae}} 
+{\bfseries Ui\+Frame} (int x, int y, int width, int height, bool hw\+Frame=false, M5\+EPD\+\_\+\+Canvas $\ast$hw\+Surface=NULL)
+\item 
+\mbox{\Hypertarget{classUiFrame_a0fd4d90bb2b175582e4bed52d55f6e37}\label{classUiFrame_a0fd4d90bb2b175582e4bed52d55f6e37}} 
+void {\bfseries init} (int x, int y, int width, int height, bool hw\+Frame=false, M5\+EPD\+\_\+\+Canvas $\ast$hw\+Surface=NULL)
+\item 
+\mbox{\Hypertarget{classUiFrame_a731a40997a381c8e63e5cc3ec9a7e224}\label{classUiFrame_a731a40997a381c8e63e5cc3ec9a7e224}} 
+void {\bfseries add} (\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$obj)
+\item 
+void \mbox{\hyperlink{classUiFrame_a050e44ccb72be87cfe6b626039eeb38a}{reset\+Status}} () override
+\begin{DoxyCompactList}\small\item\em Resets the flags used to render the object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUiFrame_aaa1c7e029bb11c54ad2b359dfbed8f5d}{is\+Updated}} () override
+\begin{DoxyCompactList}\small\item\em Checks if the object has been updated since the last render. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUiFrame_a5f6e45504370373ddb2bdb8de82f61f4}\label{classUiFrame_a5f6e45504370373ddb2bdb8de82f61f4}} 
+bool {\bfseries is\+Object\+Changed} (\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$obj)
+\item 
+\mbox{\Hypertarget{classUiFrame_a3ba923807e6620db81071db225cc04b1}\label{classUiFrame_a3ba923807e6620db81071db225cc04b1}} 
+bool {\bfseries within\+Area} (struct \mbox{\hyperlink{structarea}{area}} check\+Area, \mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$obj)
+\item 
+\mbox{\Hypertarget{classUiFrame_aef00fec2b4fb6cddca17f2cec2ea02e4}\label{classUiFrame_aef00fec2b4fb6cddca17f2cec2ea02e4}} 
+bool {\bfseries overlaps} (\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$obj1, \mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$obj2)
+\item 
+\mbox{\Hypertarget{classUiFrame_aa3937918ca946ab90d25bf1df944e3ba}\label{classUiFrame_aa3937918ca946ab90d25bf1df944e3ba}} 
+void {\bfseries update\+Below} (\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$obj)
+\item 
+struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiFrame_a90ecdeade8ad710e596bcf0f4671dba6}{get\+Update\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Finds the area on the object that has been updated and returns it. The child class must implement this. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiFrame_ab235048467d0de94f7490ad0053219fa}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Drawing method for the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiFrame_a8d50fca5f31f03c70a21c32378aa330d}{expose}} (struct \mbox{\hyperlink{structarea}{area}} x\+Area) override
+\begin{DoxyCompactList}\small\item\em Called when part of an object is uncovered and its buffer needs to be rerendered to the parent. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUiFrame_a8bd6527bc8b93cda7eec7d55dd481adf}{touch\+Event}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Called when the object is touched by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiFrame_a5868f0ebb38ccdfc1765952b5157cdb7}\label{classUiFrame_a5868f0ebb38ccdfc1765952b5157cdb7}} 
+std\+::vector$<$ \mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$ $>$ {\bfseries objects}
+\item 
+\mbox{\Hypertarget{classUiFrame_ae64bd604cb10705abc4f9f6a37cf5320}\label{classUiFrame_ae64bd604cb10705abc4f9f6a37cf5320}} 
+bool {\bfseries initialised}
+\item 
+\mbox{\Hypertarget{classUiFrame_aecb724b53a06a966e5e2a846ce76ce27}\label{classUiFrame_aecb724b53a06a966e5e2a846ce76ce27}} 
+bool {\bfseries hw\+Frame}
+\item 
+\mbox{\Hypertarget{classUiFrame_a4bb02b0e2c72830da420703a0327268c}\label{classUiFrame_a4bb02b0e2c72830da420703a0327268c}} 
+bool {\bfseries items\+Changed}
+\item 
+\mbox{\Hypertarget{classUiFrame_a5030caa6ccef35d5337b89dd3fb8be19}\label{classUiFrame_a5030caa6ccef35d5337b89dd3fb8be19}} 
+M5\+EPD\+\_\+\+Canvas $\ast$ {\bfseries hw\+Surface}
+\item 
+\mbox{\Hypertarget{classUiFrame_a477d033272bbc9b884e53e962bedac02}\label{classUiFrame_a477d033272bbc9b884e53e962bedac02}} 
+uint16\+\_\+t {\bfseries background\+Colour}
+\item 
+\mbox{\Hypertarget{classUiFrame_a4a1e5b4d6ba93b06587a0d4424e9fbb7}\label{classUiFrame_a4a1e5b4d6ba93b06587a0d4424e9fbb7}} 
+uint16\+\_\+t {\bfseries border\+Colour}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUiFrame_ab235048467d0de94f7490ad0053219fa}\label{classUiFrame_ab235048467d0de94f7490ad0053219fa}} 
+\index{UiFrame@{UiFrame}!draw@{draw}}
+\index{draw@{draw}!UiFrame@{UiFrame}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Ui\+Frame\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Drawing method for the object. 
+
+This method should draw the object to the screen buffer. The property this-\/$>$surface is a TFT\+\_\+e\+Sprite object that can be using to draw on. The child class must implement this. 
+
+Reimplemented from \mbox{\hyperlink{classUiLabel_ae02c976dfe5226384f696c4f147f51c3}{Ui\+Label}}.
+
+\mbox{\Hypertarget{classUiFrame_a8d50fca5f31f03c70a21c32378aa330d}\label{classUiFrame_a8d50fca5f31f03c70a21c32378aa330d}} 
+\index{UiFrame@{UiFrame}!expose@{expose}}
+\index{expose@{expose}!UiFrame@{UiFrame}}
+\doxysubsubsection{\texorpdfstring{expose()}{expose()}}
+{\footnotesize\ttfamily void Ui\+Frame\+::expose (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarea}{area}}}]{x\+Area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when part of an object is uncovered and its buffer needs to be rerendered to the parent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Area} & A struct containing the area of the object that needs to be redrawn. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classUiObj_a69376a9dd3823c4dd52a4e834e9eede2}{Ui\+Obj}}.
+
+\mbox{\Hypertarget{classUiFrame_a90ecdeade8ad710e596bcf0f4671dba6}\label{classUiFrame_a90ecdeade8ad710e596bcf0f4671dba6}} 
+\index{UiFrame@{UiFrame}!getUpdateArea@{getUpdateArea}}
+\index{getUpdateArea@{getUpdateArea}!UiFrame@{UiFrame}}
+\doxysubsubsection{\texorpdfstring{getUpdateArea()}{getUpdateArea()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarea}{area}} Ui\+Frame\+::get\+Update\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Finds the area on the object that has been updated and returns it. The child class must implement this. 
+
+\begin{DoxyReturn}{Returns}
+struct area 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUiLabel_a2344d8ea1ad9a37845d0837923766b65}{Ui\+Label}}.
+
+\mbox{\Hypertarget{classUiFrame_aaa1c7e029bb11c54ad2b359dfbed8f5d}\label{classUiFrame_aaa1c7e029bb11c54ad2b359dfbed8f5d}} 
+\index{UiFrame@{UiFrame}!isUpdated@{isUpdated}}
+\index{isUpdated@{isUpdated}!UiFrame@{UiFrame}}
+\doxysubsubsection{\texorpdfstring{isUpdated()}{isUpdated()}}
+{\footnotesize\ttfamily bool Ui\+Frame\+::is\+Updated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the object has been updated since the last render. 
+
+This function is used to determine if the object needs to be redrawn. The function should be overridden by child classes to check for changes to the object. \begin{DoxyReturn}{Returns}
+True if the object has been updated. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUiLabel_a67c540d51482407dab47c0dda117f5d8}{Ui\+Label}}.
+
+\mbox{\Hypertarget{classUiFrame_a050e44ccb72be87cfe6b626039eeb38a}\label{classUiFrame_a050e44ccb72be87cfe6b626039eeb38a}} 
+\index{UiFrame@{UiFrame}!resetStatus@{resetStatus}}
+\index{resetStatus@{resetStatus}!UiFrame@{UiFrame}}
+\doxysubsubsection{\texorpdfstring{resetStatus()}{resetStatus()}}
+{\footnotesize\ttfamily void Ui\+Frame\+::reset\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resets the flags used to render the object. 
+
+This function is called after the object has been rendered to reset the flags used to render the object. This can be overridden by child classes to reset any additional flags. 
+
+Reimplemented from \mbox{\hyperlink{classUiObj_a997c728f46e901a2c25c0c25a22285fe}{Ui\+Obj}}.
+
+\mbox{\Hypertarget{classUiFrame_a8bd6527bc8b93cda7eec7d55dd481adf}\label{classUiFrame_a8bd6527bc8b93cda7eec7d55dd481adf}} 
+\index{UiFrame@{UiFrame}!touchEvent@{touchEvent}}
+\index{touchEvent@{touchEvent}!UiFrame@{UiFrame}}
+\doxysubsubsection{\texorpdfstring{touchEvent()}{touchEvent()}}
+{\footnotesize\ttfamily bool Ui\+Frame\+::touch\+Event (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when the object is touched by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate on the object that was touched. \\
+\hline
+{\em y} & The y coordinate on the object that was touched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUiLabel_aa77fc29e8eccc8673b58286f47ca3e2b}{Ui\+Label}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classUiManager_aff7423aa002e53003609be15cccb05f2}{Ui\+Manager}}, and \mbox{\hyperlink{classUiIcon_aa23ace5b648a2e0917c076a557fdc8e1}{Ui\+Icon}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main.\+cpp\end{DoxyCompactItemize}

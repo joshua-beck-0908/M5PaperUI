@@ -1,0 +1,6 @@
+<map id="UiButton" name="UiButton">
+<area shape="rect" id="node1" title="A button control with a callback function." alt="" coords="5,261,79,288"/>
+<area shape="rect" id="node2" href="$classUiLabel.html" title="A simple label object." alt="" coords="9,185,75,212"/>
+<area shape="rect" id="node3" href="$classUiObj.html" title=" " alt="" coords="15,109,69,136"/>
+<area shape="rect" id="node4" href="$structarea.html" title=" " alt="" coords="19,5,65,32"/>
+</map>

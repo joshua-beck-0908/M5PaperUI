@@ -1,0 +1,304 @@
+\hypertarget{classUiLabel}{}\doxysection{Ui\+Label Class Reference}
+\label{classUiLabel}\index{UiLabel@{UiLabel}}
+
+
+A simple label object.  
+
+
+
+
+Inheritance diagram for Ui\+Label\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classUiLabel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ui\+Label\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classUiLabel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiLabel_ad18f4c2ed4ccce9c96dd564891ee4df3}\label{classUiLabel_ad18f4c2ed4ccce9c96dd564891ee4df3}} 
+enum {\bfseries h\+Align} \{ {\bfseries ALIGN\+\_\+\+LEFT}
+, {\bfseries ALIGN\+\_\+\+CENTRE}
+, {\bfseries ALIGN\+\_\+\+RIGHT}
+ \}
+\item 
+\mbox{\Hypertarget{classUiLabel_a9fc83bad027a306e53c52596af157c12}\label{classUiLabel_a9fc83bad027a306e53c52596af157c12}} 
+enum {\bfseries v\+Align} \{ {\bfseries ALIGN\+\_\+\+TOP}
+, {\bfseries ALIGN\+\_\+\+MIDDLE}
+, {\bfseries ALIGN\+\_\+\+BOTTOM}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiLabel_ad697780c6db2ced402a883939f729ff0}\label{classUiLabel_ad697780c6db2ced402a883939f729ff0}} 
+{\bfseries Ui\+Label} (int x, int y, int width, int height, String text, bool unbuffered=false)
+\item 
+\mbox{\Hypertarget{classUiLabel_a6390e9ee682455a5f8e64b99874bfdd9}\label{classUiLabel_a6390e9ee682455a5f8e64b99874bfdd9}} 
+{\bfseries Ui\+Label} (int x, int y, String text)
+\item 
+\mbox{\Hypertarget{classUiLabel_ac4c5f40cc7be39faa42f813febab0bd8}\label{classUiLabel_ac4c5f40cc7be39faa42f813febab0bd8}} 
+void {\bfseries init} (int x, int y, String text)
+\item 
+\mbox{\Hypertarget{classUiLabel_a94219d9d84a19e8a1d7efa5dd9cc5e80}\label{classUiLabel_a94219d9d84a19e8a1d7efa5dd9cc5e80}} 
+void {\bfseries init} (int x, int y, int width, int height, String text, bool unbuffered=false)
+\item 
+bool \mbox{\hyperlink{classUiLabel_a67c540d51482407dab47c0dda117f5d8}{is\+Updated}} () override
+\begin{DoxyCompactList}\small\item\em Checks if the object has been updated since the last render. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiLabel_a2344d8ea1ad9a37845d0837923766b65}{get\+Update\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Finds the area on the object that has been updated and returns it. The child class must implement this. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiLabel_ae02c976dfe5226384f696c4f147f51c3}{draw}} () override
+\begin{DoxyCompactList}\small\item\em Drawing method for the object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUiLabel_a87d92542ce345a3133bd3c3006acd677}\label{classUiLabel_a87d92542ce345a3133bd3c3006acd677}} 
+void {\bfseries draw\+Text} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_af269f45df74f34f3f20df84b955a8198}\label{classUiLabel_af269f45df74f34f3f20df84b955a8198}} 
+void {\bfseries draw\+Multiline\+Text} (struct \mbox{\hyperlink{structarea}{area}} text\+Area)
+\item 
+\mbox{\Hypertarget{classUiLabel_a606d859f6e0e29d779845374102575cf}\label{classUiLabel_a606d859f6e0e29d779845374102575cf}} 
+int {\bfseries line\+Limit} (String text, int offset)
+\item 
+\mbox{\Hypertarget{classUiLabel_ac9251d8d9a78e9af9155635b73aead57}\label{classUiLabel_ac9251d8d9a78e9af9155635b73aead57}} 
+int {\bfseries get\+Text\+HPos} (String text)
+\item 
+\mbox{\Hypertarget{classUiLabel_a7a2d16960f57b1afcbfcc0e6891c7b51}\label{classUiLabel_a7a2d16960f57b1afcbfcc0e6891c7b51}} 
+struct \mbox{\hyperlink{structarea}{area}} {\bfseries get\+Text\+Pos} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_a013e296301d09a7a18f7f19b27a94f76}\label{classUiLabel_a013e296301d09a7a18f7f19b27a94f76}} 
+int {\bfseries get\+Multiline\+Height} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_af4ff953e1b8769e784eb1cd24a24d5e9}\label{classUiLabel_af4ff953e1b8769e784eb1cd24a24d5e9}} 
+void {\bfseries draw\+Fill} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_a98e81a97760e34dd3b9b1856c689353b}\label{classUiLabel_a98e81a97760e34dd3b9b1856c689353b}} 
+void {\bfseries draw\+Outline} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_a91bf9aa9e8553beb597cc8fc1591f0b7}\label{classUiLabel_a91bf9aa9e8553beb597cc8fc1591f0b7}} 
+void {\bfseries set\+Outline} (uint16\+\_\+t colour, uint16\+\_\+t thickness, uint16\+\_\+t rounding\+Radius=0)
+\item 
+\mbox{\Hypertarget{classUiLabel_a5d3cbe841ab824e34d02bde8fdd0548f}\label{classUiLabel_a5d3cbe841ab824e34d02bde8fdd0548f}} 
+void {\bfseries set\+Text\+Colour} (uint16\+\_\+t colour)
+\item 
+\mbox{\Hypertarget{classUiLabel_a004442e7ebb915ba467dbdeb2cc1ce0e}\label{classUiLabel_a004442e7ebb915ba467dbdeb2cc1ce0e}} 
+void {\bfseries set\+Text\+Size} (int size)
+\item 
+\mbox{\Hypertarget{classUiLabel_a87b14378fa514e4626ac172153cbe852}\label{classUiLabel_a87b14378fa514e4626ac172153cbe852}} 
+void {\bfseries set\+Fill} (uint16\+\_\+t colour, uint16\+\_\+t rounding\+Radius=0)
+\item 
+\mbox{\Hypertarget{classUiLabel_ac4667604d41773f40ebfbba671be6083}\label{classUiLabel_ac4667604d41773f40ebfbba671be6083}} 
+void {\bfseries no\+Fill} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_a2c323b229813ec42afb785f8766d7027}\label{classUiLabel_a2c323b229813ec42afb785f8766d7027}} 
+void {\bfseries no\+Border} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_acbfd68fcb9993886ad9ebdd8c1165bdb}\label{classUiLabel_acbfd68fcb9993886ad9ebdd8c1165bdb}} 
+void {\bfseries set\+Text} (String text)
+\item 
+\mbox{\Hypertarget{classUiLabel_ab751516077548f24439890f4b275e314}\label{classUiLabel_ab751516077548f24439890f4b275e314}} 
+void {\bfseries set\+Font} (GFXfont $\ast$font)
+\item 
+\mbox{\Hypertarget{classUiLabel_a86a5f2366911e0ba173d827b594464cd}\label{classUiLabel_a86a5f2366911e0ba173d827b594464cd}} 
+void {\bfseries pre\+Render} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_afae374b243d952b75c980170c1bf98fc}\label{classUiLabel_afae374b243d952b75c980170c1bf98fc}} 
+void {\bfseries auto\+Resize} (bool init=false)
+\item 
+\mbox{\Hypertarget{classUiLabel_a685763ffd7f63935db6d65322da55b91}\label{classUiLabel_a685763ffd7f63935db6d65322da55b91}} 
+void {\bfseries resize} (int width, int height)
+\item 
+\mbox{\Hypertarget{classUiLabel_a3cf6d5ca19ea5dbe254b2748c3965ef0}\label{classUiLabel_a3cf6d5ca19ea5dbe254b2748c3965ef0}} 
+void {\bfseries default\+Font} ()
+\item 
+\mbox{\Hypertarget{classUiLabel_aec592d196dbce51b65af1f1f7c2f39d6}\label{classUiLabel_aec592d196dbce51b65af1f1f7c2f39d6}} 
+void {\bfseries set\+Padding} (int x\+Pad, int y\+Pad)
+\item 
+bool \mbox{\hyperlink{classUiLabel_aa77fc29e8eccc8673b58286f47ca3e2b}{touch\+Event}} (int x, int y) override
+\begin{DoxyCompactList}\small\item\em Called when the object is touched by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiLabel_a687ac05c9a80937dc87e35e5a56f6730}\label{classUiLabel_a687ac05c9a80937dc87e35e5a56f6730}} 
+String {\bfseries text}
+\item 
+\mbox{\Hypertarget{classUiLabel_ac6ede427724f3a80ef37bd7ed50568f2}\label{classUiLabel_ac6ede427724f3a80ef37bd7ed50568f2}} 
+bool {\bfseries initialised}
+\item 
+\mbox{\Hypertarget{classUiLabel_a0905fcc77cd090628cdc6758065b9f8d}\label{classUiLabel_a0905fcc77cd090628cdc6758065b9f8d}} 
+bool {\bfseries has\+Outline}
+\item 
+\mbox{\Hypertarget{classUiLabel_a05511fe857ef6ebbee60110234ef3bac}\label{classUiLabel_a05511fe857ef6ebbee60110234ef3bac}} 
+bool {\bfseries has\+Fill}
+\item 
+\mbox{\Hypertarget{classUiLabel_a4ad8599334d23a7b3cfb97b1d6e953e6}\label{classUiLabel_a4ad8599334d23a7b3cfb97b1d6e953e6}} 
+bool {\bfseries border\+Rounded}
+\item 
+\mbox{\Hypertarget{classUiLabel_afbd966f6af18164243a12b873ad3df0a}\label{classUiLabel_afbd966f6af18164243a12b873ad3df0a}} 
+bool {\bfseries fill\+Rounded}
+\item 
+\mbox{\Hypertarget{classUiLabel_ad64045d2c917af321c47a0ac723bc16e}\label{classUiLabel_ad64045d2c917af321c47a0ac723bc16e}} 
+bool {\bfseries custom\+Font}
+\item 
+\mbox{\Hypertarget{classUiLabel_aca198ae2d7de5a23bcdfb6e6acf0d3a1}\label{classUiLabel_aca198ae2d7de5a23bcdfb6e6acf0d3a1}} 
+bool {\bfseries autosize}
+\item 
+\mbox{\Hypertarget{classUiLabel_a1a98264facb4938a4c8ae309598155aa}\label{classUiLabel_a1a98264facb4938a4c8ae309598155aa}} 
+bool {\bfseries resize\+Needed}
+\item 
+\mbox{\Hypertarget{classUiLabel_a0cc53dc510d518d3f2c08bc93e0a8f94}\label{classUiLabel_a0cc53dc510d518d3f2c08bc93e0a8f94}} 
+uint16\+\_\+t {\bfseries border\+Rounding\+Radius}
+\item 
+\mbox{\Hypertarget{classUiLabel_ad458000c6d867790f51f7d8494fb3a5b}\label{classUiLabel_ad458000c6d867790f51f7d8494fb3a5b}} 
+uint16\+\_\+t {\bfseries fill\+Rounding\+Radius}
+\item 
+\mbox{\Hypertarget{classUiLabel_ad40a7f67182164f616f3debc144e510e}\label{classUiLabel_ad40a7f67182164f616f3debc144e510e}} 
+uint16\+\_\+t {\bfseries outline\+Colour}
+\item 
+\mbox{\Hypertarget{classUiLabel_a8886fedd261a462b96cf242e0e0c7816}\label{classUiLabel_a8886fedd261a462b96cf242e0e0c7816}} 
+uint16\+\_\+t {\bfseries outline\+Thickness}
+\item 
+\mbox{\Hypertarget{classUiLabel_ae0cb717495a7fb3701ff05ee91f09753}\label{classUiLabel_ae0cb717495a7fb3701ff05ee91f09753}} 
+uint16\+\_\+t {\bfseries fill\+Colour}
+\item 
+\mbox{\Hypertarget{classUiLabel_ad00847bba5fb5e12e5e7d378fd0be57e}\label{classUiLabel_ad00847bba5fb5e12e5e7d378fd0be57e}} 
+uint16\+\_\+t {\bfseries text\+Colour}
+\item 
+\mbox{\Hypertarget{classUiLabel_a8548e9eba2ef3805ab187a669160debd}\label{classUiLabel_a8548e9eba2ef3805ab187a669160debd}} 
+uint16\+\_\+t {\bfseries text\+Size}
+\item 
+\mbox{\Hypertarget{classUiLabel_acc6a7c4b9b1930dcb9c9d09356b364a5}\label{classUiLabel_acc6a7c4b9b1930dcb9c9d09356b364a5}} 
+uint16\+\_\+t {\bfseries text\+Alignment}
+\item 
+\mbox{\Hypertarget{classUiLabel_adacb023c0b0301d882d04dc61e4e86b4}\label{classUiLabel_adacb023c0b0301d882d04dc61e4e86b4}} 
+uint16\+\_\+t {\bfseries x\+Pad}
+\item 
+\mbox{\Hypertarget{classUiLabel_a7e2d01149023406248f353739bfbddb7}\label{classUiLabel_a7e2d01149023406248f353739bfbddb7}} 
+uint16\+\_\+t {\bfseries y\+Pad}
+\item 
+\mbox{\Hypertarget{classUiLabel_abd020acddb1659ce4cd68538f9b38e77}\label{classUiLabel_abd020acddb1659ce4cd68538f9b38e77}} 
+GFXfont $\ast$ {\bfseries font}
+\item 
+\mbox{\Hypertarget{classUiLabel_a07597f842555b7d4c601c84738977091}\label{classUiLabel_a07597f842555b7d4c601c84738977091}} 
+bool {\bfseries has\+Pre\+Render}
+\item 
+\mbox{\Hypertarget{classUiLabel_a308cf4ad8d7983ed9479a5cb7e34d8c9}\label{classUiLabel_a308cf4ad8d7983ed9479a5cb7e34d8c9}} 
+enum v\+Align {\bfseries v\+Alignment}
+\item 
+\mbox{\Hypertarget{classUiLabel_a45e7ade692e02d7d060e08585beb09e8}\label{classUiLabel_a45e7ade692e02d7d060e08585beb09e8}} 
+enum h\+Align {\bfseries h\+Alignment}
+\item 
+\mbox{\Hypertarget{classUiLabel_af5e61f171f079f26041936509926f2a7}\label{classUiLabel_af5e61f171f079f26041936509926f2a7}} 
+float {\bfseries line\+Spacing}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple label object. 
+
+A simple label object. Can be used to display text on the screen. A number of formatting options are available. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUiLabel_ae02c976dfe5226384f696c4f147f51c3}\label{classUiLabel_ae02c976dfe5226384f696c4f147f51c3}} 
+\index{UiLabel@{UiLabel}!draw@{draw}}
+\index{draw@{draw}!UiLabel@{UiLabel}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Ui\+Label\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Drawing method for the object. 
+
+This method should draw the object to the screen buffer. The property this-\/$>$surface is a TFT\+\_\+e\+Sprite object that can be using to draw on. The child class must implement this. 
+
+Implements \mbox{\hyperlink{classUiObj_ac138b4a84adf207b439341a315c31e63}{Ui\+Obj}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classUiFrame_ab235048467d0de94f7490ad0053219fa}{Ui\+Frame}}.
+
+\mbox{\Hypertarget{classUiLabel_a2344d8ea1ad9a37845d0837923766b65}\label{classUiLabel_a2344d8ea1ad9a37845d0837923766b65}} 
+\index{UiLabel@{UiLabel}!getUpdateArea@{getUpdateArea}}
+\index{getUpdateArea@{getUpdateArea}!UiLabel@{UiLabel}}
+\doxysubsubsection{\texorpdfstring{getUpdateArea()}{getUpdateArea()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarea}{area}} Ui\+Label\+::get\+Update\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds the area on the object that has been updated and returns it. The child class must implement this. 
+
+\begin{DoxyReturn}{Returns}
+struct area 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUiObj_a65d6d8e4fc94b7a0052c1909d8740426}{Ui\+Obj}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classUiFrame_a90ecdeade8ad710e596bcf0f4671dba6}{Ui\+Frame}}.
+
+\mbox{\Hypertarget{classUiLabel_a67c540d51482407dab47c0dda117f5d8}\label{classUiLabel_a67c540d51482407dab47c0dda117f5d8}} 
+\index{UiLabel@{UiLabel}!isUpdated@{isUpdated}}
+\index{isUpdated@{isUpdated}!UiLabel@{UiLabel}}
+\doxysubsubsection{\texorpdfstring{isUpdated()}{isUpdated()}}
+{\footnotesize\ttfamily bool Ui\+Label\+::is\+Updated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the object has been updated since the last render. 
+
+This function is used to determine if the object needs to be redrawn. The function should be overridden by child classes to check for changes to the object. \begin{DoxyReturn}{Returns}
+True if the object has been updated. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUiObj_a18070d33057d779266f830948863390d}{Ui\+Obj}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classUiFrame_aaa1c7e029bb11c54ad2b359dfbed8f5d}{Ui\+Frame}}.
+
+\mbox{\Hypertarget{classUiLabel_aa77fc29e8eccc8673b58286f47ca3e2b}\label{classUiLabel_aa77fc29e8eccc8673b58286f47ca3e2b}} 
+\index{UiLabel@{UiLabel}!touchEvent@{touchEvent}}
+\index{touchEvent@{touchEvent}!UiLabel@{UiLabel}}
+\doxysubsubsection{\texorpdfstring{touchEvent()}{touchEvent()}}
+{\footnotesize\ttfamily bool Ui\+Label\+::touch\+Event (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the object is touched by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate on the object that was touched. \\
+\hline
+{\em y} & The y coordinate on the object that was touched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUiObj_a484702c2e9f2327de7ad61e04745f796}{Ui\+Obj}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classUiManager_aff7423aa002e53003609be15cccb05f2}{Ui\+Manager}}, \mbox{\hyperlink{classUiIcon_aa23ace5b648a2e0917c076a557fdc8e1}{Ui\+Icon}}, \mbox{\hyperlink{classUiButton_ade08c4fcd37638f73598461d1982f3b5}{Ui\+Button}}, and \mbox{\hyperlink{classUiFrame_a8bd6527bc8b93cda7eec7d55dd481adf}{Ui\+Frame}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{classUiButton}{}\doxysection{Ui\+Button Class Reference}
+\label{classUiButton}\index{UiButton@{UiButton}}
+
+
+A button control with a callback function.  
+
+
+
+
+Inheritance diagram for Ui\+Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{classUiButton__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ui\+Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classUiButton__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiButton_adb2de6bfdaac70ce46b62afc39c84c51}\label{classUiButton_adb2de6bfdaac70ce46b62afc39c84c51}} 
+enum {\bfseries button\+Event} \{ {\bfseries BUTTON\+\_\+\+PRESSED} = 100
+, {\bfseries BUTTON\+\_\+\+RELEASED}
+, {\bfseries BUTTON\+\_\+\+HOLD}
+, {\bfseries BUTTON\+\_\+\+DOUBLE\+\_\+\+TAP}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiButton_a66547f0af91d2f60d08474e5f956f4f1}\label{classUiButton_a66547f0af91d2f60d08474e5f956f4f1}} 
+{\bfseries Ui\+Button} (int x, int y, String text, bool($\ast$callback)(\mbox{\hyperlink{classUiButton}{Ui\+Button}} $\ast$, int))
+\item 
+\mbox{\Hypertarget{classUiButton_afcda17c0e411e08ae8dd3ed7ec8880ee}\label{classUiButton_afcda17c0e411e08ae8dd3ed7ec8880ee}} 
+{\bfseries Ui\+Button} (int x, int y, String text, std\+::function$<$ bool(\mbox{\hyperlink{classUiButton}{Ui\+Button}} $\ast$, int)$>$ callback)
+\item 
+\mbox{\Hypertarget{classUiButton_aa4f31e903bab2f2fdb92912d4712740c}\label{classUiButton_aa4f31e903bab2f2fdb92912d4712740c}} 
+void {\bfseries init} (int x, int y, String text, bool($\ast$callback)(\mbox{\hyperlink{classUiButton}{Ui\+Button}} $\ast$, int))
+\item 
+\mbox{\Hypertarget{classUiButton_aae9b9b2e7dff33e1563ecbb2d0bf9d59}\label{classUiButton_aae9b9b2e7dff33e1563ecbb2d0bf9d59}} 
+void {\bfseries set\+Outline} (uint16\+\_\+t colour, uint16\+\_\+t thickness, uint16\+\_\+t rounding\+Radius)
+\item 
+bool \mbox{\hyperlink{classUiButton_ade08c4fcd37638f73598461d1982f3b5}{touch\+Event}} (int x, int y) override
+\begin{DoxyCompactList}\small\item\em Called when the object is touched by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiButton_aefd4555edb221a4be50a3ea85e05c0cb}\label{classUiButton_aefd4555edb221a4be50a3ea85e05c0cb}} 
+bool($\ast$ {\bfseries callback} )(\mbox{\hyperlink{classUiButton}{Ui\+Button}} $\ast$, int)
+\item 
+\mbox{\Hypertarget{classUiButton_a95990dbeb7d423edfc91b1e4122f76d3}\label{classUiButton_a95990dbeb7d423edfc91b1e4122f76d3}} 
+std\+::function$<$ bool(\mbox{\hyperlink{classUiButton}{Ui\+Button}} $\ast$, int)$>$ {\bfseries std\+Callback}
+\item 
+\mbox{\Hypertarget{classUiButton_a3a3f8a4a4dbbc6236316570c88257e0d}\label{classUiButton_a3a3f8a4a4dbbc6236316570c88257e0d}} 
+int {\bfseries border\+Colour}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A button control with a callback function. 
+
+This class is a button control with a callback function. It inherits from \mbox{\hyperlink{classUiLabel}{Ui\+Label}}, so all formatting is available. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUiButton_ade08c4fcd37638f73598461d1982f3b5}\label{classUiButton_ade08c4fcd37638f73598461d1982f3b5}} 
+\index{UiButton@{UiButton}!touchEvent@{touchEvent}}
+\index{touchEvent@{touchEvent}!UiButton@{UiButton}}
+\doxysubsubsection{\texorpdfstring{touchEvent()}{touchEvent()}}
+{\footnotesize\ttfamily bool Ui\+Button\+::touch\+Event (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the object is touched by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate on the object that was touched. \\
+\hline
+{\em y} & The y coordinate on the object that was touched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUiLabel_aa77fc29e8eccc8673b58286f47ca3e2b}{Ui\+Label}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main.\+cpp\end{DoxyCompactItemize}

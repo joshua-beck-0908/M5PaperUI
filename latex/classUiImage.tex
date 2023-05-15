@@ -1,0 +1,129 @@
+\hypertarget{classUiImage}{}\doxysection{Ui\+Image Class Reference}
+\label{classUiImage}\index{UiImage@{UiImage}}
+
+
+Inheritance diagram for Ui\+Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classUiImage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ui\+Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classUiImage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiImage_a2bf7b26ff309b89c3c484b8630e8c9a0}\label{classUiImage_a2bf7b26ff309b89c3c484b8630e8c9a0}} 
+{\bfseries Ui\+Image} (int x, int y, int width, int height, uint8\+\_\+t $\ast$bitmap)
+\item 
+bool \mbox{\hyperlink{classUiImage_afd4ce82cec11914eab76e8c75382bd4d}{is\+Updated}} () override
+\begin{DoxyCompactList}\small\item\em Checks if the object has been updated since the last render. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiImage_a9ebd44d66da6bc5d31e39032985d97f5}{get\+Update\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Finds the area on the object that has been updated and returns it. The child class must implement this. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiImage_aaac66b86a5cc8d998b9153885250cb56}{draw}} () override
+\begin{DoxyCompactList}\small\item\em Drawing method for the object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUiImage_aa8cedc1a0f665b570174452f307e2f43}{touch\+Event}} (int x, int y) override
+\begin{DoxyCompactList}\small\item\em Called when the object is touched by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiImage_a77df9281dbd63057f9de36bee75a19f6}\label{classUiImage_a77df9281dbd63057f9de36bee75a19f6}} 
+uint8\+\_\+t $\ast$ {\bfseries image}
+\item 
+\mbox{\Hypertarget{classUiImage_a54a3d64dc2d2e12403c5b3b207e9f12d}\label{classUiImage_a54a3d64dc2d2e12403c5b3b207e9f12d}} 
+bool {\bfseries initialised}
+\item 
+\mbox{\Hypertarget{classUiImage_a07f36676a8a8a19e6d7b8713653d7643}\label{classUiImage_a07f36676a8a8a19e6d7b8713653d7643}} 
+uint16\+\_\+t {\bfseries background\+Colour}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUiImage_aaac66b86a5cc8d998b9153885250cb56}\label{classUiImage_aaac66b86a5cc8d998b9153885250cb56}} 
+\index{UiImage@{UiImage}!draw@{draw}}
+\index{draw@{draw}!UiImage@{UiImage}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Ui\+Image\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Drawing method for the object. 
+
+This method should draw the object to the screen buffer. The property this-\/$>$surface is a TFT\+\_\+e\+Sprite object that can be using to draw on. The child class must implement this. 
+
+Implements \mbox{\hyperlink{classUiObj_ac138b4a84adf207b439341a315c31e63}{Ui\+Obj}}.
+
+\mbox{\Hypertarget{classUiImage_a9ebd44d66da6bc5d31e39032985d97f5}\label{classUiImage_a9ebd44d66da6bc5d31e39032985d97f5}} 
+\index{UiImage@{UiImage}!getUpdateArea@{getUpdateArea}}
+\index{getUpdateArea@{getUpdateArea}!UiImage@{UiImage}}
+\doxysubsubsection{\texorpdfstring{getUpdateArea()}{getUpdateArea()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarea}{area}} Ui\+Image\+::get\+Update\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds the area on the object that has been updated and returns it. The child class must implement this. 
+
+\begin{DoxyReturn}{Returns}
+struct area 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUiObj_a65d6d8e4fc94b7a0052c1909d8740426}{Ui\+Obj}}.
+
+\mbox{\Hypertarget{classUiImage_afd4ce82cec11914eab76e8c75382bd4d}\label{classUiImage_afd4ce82cec11914eab76e8c75382bd4d}} 
+\index{UiImage@{UiImage}!isUpdated@{isUpdated}}
+\index{isUpdated@{isUpdated}!UiImage@{UiImage}}
+\doxysubsubsection{\texorpdfstring{isUpdated()}{isUpdated()}}
+{\footnotesize\ttfamily bool Ui\+Image\+::is\+Updated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the object has been updated since the last render. 
+
+This function is used to determine if the object needs to be redrawn. The function should be overridden by child classes to check for changes to the object. \begin{DoxyReturn}{Returns}
+True if the object has been updated. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUiObj_a18070d33057d779266f830948863390d}{Ui\+Obj}}.
+
+\mbox{\Hypertarget{classUiImage_aa8cedc1a0f665b570174452f307e2f43}\label{classUiImage_aa8cedc1a0f665b570174452f307e2f43}} 
+\index{UiImage@{UiImage}!touchEvent@{touchEvent}}
+\index{touchEvent@{touchEvent}!UiImage@{UiImage}}
+\doxysubsubsection{\texorpdfstring{touchEvent()}{touchEvent()}}
+{\footnotesize\ttfamily bool Ui\+Image\+::touch\+Event (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the object is touched by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate on the object that was touched. \\
+\hline
+{\em y} & The y coordinate on the object that was touched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUiObj_a484702c2e9f2327de7ad61e04745f796}{Ui\+Obj}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main.\+cpp\end{DoxyCompactItemize}

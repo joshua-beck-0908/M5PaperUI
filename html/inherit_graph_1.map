@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classUiObj.html" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node2" href="$classUiHwImage.html" title=" " alt="" coords="108,5,199,32"/>
+<area shape="rect" id="node3" href="$classUiImage.html" title=" " alt="" coords="118,56,189,83"/>
+<area shape="rect" id="node4" href="$classUiLabel.html" title="A simple label object." alt="" coords="120,107,187,133"/>
+<area shape="rect" id="node5" href="$classUiButton.html" title="A button control with a callback function." alt="" coords="247,81,320,108"/>
+<area shape="rect" id="node6" href="$classUiFrame.html" title=" " alt="" coords="247,132,319,159"/>
+<area shape="rect" id="node7" href="$classUiIcon.html" title=" " alt="" coords="381,81,441,108"/>
+<area shape="rect" id="node8" href="$classUiManager.html" title=" " alt="" coords="368,132,453,159"/>
+<area shape="rect" id="node9" href="$classUiModal.html" title=" " alt="" coords="375,183,446,209"/>
+</map>

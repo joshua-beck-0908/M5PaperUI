@@ -1,0 +1,503 @@
+\hypertarget{classUiObj}{}\doxysection{Ui\+Obj Class Reference}
+\label{classUiObj}\index{UiObj@{UiObj}}
+
+
+Inheritance diagram for Ui\+Obj\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUiObj__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ui\+Obj\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classUiObj__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiObj_a3c183e0c27eb48e87bc52a2dcd25999e}\label{classUiObj_a3c183e0c27eb48e87bc52a2dcd25999e}} 
+enum {\bfseries object\+Events} \{ \newline
+{\bfseries EVENT\+\_\+\+NONE}
+, {\bfseries EVENT\+\_\+\+TOUCH}
+, {\bfseries EVENT\+\_\+\+DRAW}
+, {\bfseries EVENT\+\_\+\+UPDATE}
+, \newline
+{\bfseries EVENT\+\_\+\+VISIBILITY}
+, {\bfseries EVENT\+\_\+\+PARENT\+\_\+\+CHANGE}
+ \}
+\item 
+\mbox{\Hypertarget{classUiObj_a3208e0c4ad3e270a1fa8a6032a037db1}\label{classUiObj_a3208e0c4ad3e270a1fa8a6032a037db1}} 
+enum {\bfseries layer\+\_\+t} \{ \newline
+{\bfseries LAYER\+\_\+\+BG}
+, {\bfseries LAYER\+\_\+\+LOWER}
+, {\bfseries LAYER\+\_\+\+CENTRE}
+, {\bfseries LAYER\+\_\+\+UPPER}
+, \newline
+{\bfseries LAYER\+\_\+\+TOP}
+, {\bfseries LAYER\+\_\+\+OVERLAY}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiObj_a662c141d1eec9c0c3f1696701b50a560}\label{classUiObj_a662c141d1eec9c0c3f1696701b50a560}} 
+{\bfseries Ui\+Obj} (int x, int y, int width, int height, bool unbuffered=false)
+\item 
+\mbox{\Hypertarget{classUiObj_acd85f35a688f2d84a0e65b1ee095fd33}\label{classUiObj_acd85f35a688f2d84a0e65b1ee095fd33}} 
+void {\bfseries init} (int x, int y, int width, int height, bool unbuffered=false)
+\item 
+\mbox{\Hypertarget{classUiObj_a565ccfd76ca06df500b95286c4d47f39}\label{classUiObj_a565ccfd76ca06df500b95286c4d47f39}} 
+void \mbox{\hyperlink{classUiObj_a565ccfd76ca06df500b95286c4d47f39}{init\+Defaults}} ()
+\begin{DoxyCompactList}\small\item\em Sets the default values for the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiObj_ae7a0a85c8e412e28633c154e73cd61ef}{create\+Buffer}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Create a buffer for the object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUiObj_ac138b4a84adf207b439341a315c31e63}{draw}} ()=0
+\begin{DoxyCompactList}\small\item\em Drawing method for the object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classUiObj_a484702c2e9f2327de7ad61e04745f796}{touch\+Event}} (int x, int y)=0
+\begin{DoxyCompactList}\small\item\em Called when the object is touched by the user. \end{DoxyCompactList}\item 
+virtual struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiObj_a65d6d8e4fc94b7a0052c1909d8740426}{get\+Update\+Area}} ()=0
+\begin{DoxyCompactList}\small\item\em Finds the area on the object that has been updated and returns it. The child class must implement this. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiObj_ab2158f6c1b7c0bec39365b1457a4332c}{set\+Parent}} (\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Set the parent to this object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classUiObj_ac2830f0645155a17d2a7f8dbb517e036}{within}} (struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{structarea}{area}})
+\begin{DoxyCompactList}\small\item\em Checks if an area on the parent is within the bounds of an object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUiObj_ae5fcb8042da848b37191001a4006e70b}\label{classUiObj_ae5fcb8042da848b37191001a4006e70b}} 
+struct \mbox{\hyperlink{structarea}{area}} {\bfseries child\+Offset} (struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{structarea}{area}})
+\item 
+\mbox{\Hypertarget{classUiObj_a6c0f6c73c0b9101767a44c8043aa4960}\label{classUiObj_a6c0f6c73c0b9101767a44c8043aa4960}} 
+void \mbox{\hyperlink{classUiObj_a6c0f6c73c0b9101767a44c8043aa4960}{show}} ()
+\begin{DoxyCompactList}\small\item\em Sets the object as visible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$ \mbox{\hyperlink{classUiObj_af0a98cf43a5eb6468ad72c51a98f8687}{top\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Follows the parent chain to find the top level object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUiObj_a6fd0f66f8a7bda3a516a6c8cc92a9c26}\label{classUiObj_a6fd0f66f8a7bda3a516a6c8cc92a9c26}} 
+struct \mbox{\hyperlink{structarea}{area}} {\bfseries clip} (struct \mbox{\hyperlink{structarea}{area}} area1)
+\item 
+\mbox{\Hypertarget{classUiObj_a8d055d049c81f8b95017d8e67a96a6ba}\label{classUiObj_a8d055d049c81f8b95017d8e67a96a6ba}} 
+struct \mbox{\hyperlink{structarea}{area}} {\bfseries clip} (struct \mbox{\hyperlink{structarea}{area}} area1, struct \mbox{\hyperlink{structarea}{area}} area2)
+\item 
+\mbox{\Hypertarget{classUiObj_adcfae87a6a3f8166bb4f643fa2d90b63}\label{classUiObj_adcfae87a6a3f8166bb4f643fa2d90b63}} 
+{\footnotesize template$<$typename... Args$>$ }\\struct \mbox{\hyperlink{structarea}{area}} {\bfseries clip} (struct \mbox{\hyperlink{structarea}{area}} area1, struct \mbox{\hyperlink{structarea}{area}} area2, Args... others)
+\item 
+\mbox{\Hypertarget{classUiObj_a8a8101d59cdf0d8f274c16267dbf0900}\label{classUiObj_a8a8101d59cdf0d8f274c16267dbf0900}} 
+{\footnotesize template$<$typename... Args$>$ }\\struct \mbox{\hyperlink{structarea}{area}} {\bfseries merge} (struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{structarea}{area}}, struct \mbox{\hyperlink{structarea}{area}} others)
+\item 
+\mbox{\Hypertarget{classUiObj_a0a0072974d8b9cdf557a1c40ee6e981d}\label{classUiObj_a0a0072974d8b9cdf557a1c40ee6e981d}} 
+struct \mbox{\hyperlink{structarea}{area}} {\bfseries merge} (struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{structarea}{area}})
+\item 
+struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiObj_a0db2717d3032cf6e913c5df0045c8bb7}{overlap}} (\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$other\+Obj)
+\begin{DoxyCompactList}\small\item\em Finds if two objects overlap on the screen. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiObj_a791b75c0cba4dba12e9e525bcb56b4b4}{overlap}} (struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{structarea}{area}})
+\begin{DoxyCompactList}\small\item\em Find if an area overlaps with the object. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiObj_a0573c07c8f161d2a2230a4f1759c284b}{offset\+To\+Parent}} ()
+\begin{DoxyCompactList}\small\item\em Finds the position of the object relative to its parent. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiObj_a541f69eef8818753d69630c1d296df79}{get\+Absolute\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Finds the absolute position of an object on the screen. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUiObj_a69376a9dd3823c4dd52a4e834e9eede2}{expose}} (struct \mbox{\hyperlink{structarea}{area}} x\+Area)
+\begin{DoxyCompactList}\small\item\em Called when part of an object is uncovered and its buffer needs to be rerendered to the parent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUiObj_add5efb5bb14967b0e8c61cbda8ab87a4}\label{classUiObj_add5efb5bb14967b0e8c61cbda8ab87a4}} 
+void {\bfseries hide} ()
+\item 
+virtual void \mbox{\hyperlink{classUiObj_a997c728f46e901a2c25c0c25a22285fe}{reset\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Resets the flags used to render the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiObj_a6aadbcd237b37c23f127198b5985a66d}{move}} (int x, int y, bool relative=false)
+\begin{DoxyCompactList}\small\item\em Sets the object position within it\textquotesingle{}s container. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classUiObj_a18070d33057d779266f830948863390d}{is\+Updated}} ()=0
+\begin{DoxyCompactList}\small\item\em Checks if the object has been updated since the last render. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUiObj_a5d669375c3722c9c201d337a8758adf0}\label{classUiObj_a5d669375c3722c9c201d337a8758adf0}} 
+virtual bool {\bfseries visual\+Change} ()
+\item 
+struct \mbox{\hyperlink{structarea}{area}} \mbox{\hyperlink{classUiObj_a34edbdbe79416ac6b03c1a7b99a7cea0}{get\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Converts the object properties to an area struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiObj_a60095c4765baae5714ac6f022137124d}{render}} ()
+\begin{DoxyCompactList}\small\item\em Draws and visible or changed objects to their surface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiObj_af1b87c2b663b8bf34824996e2b8fc67b}{copy\+To\+Parent}} ()
+\begin{DoxyCompactList}\small\item\em Copies the object\textquotesingle{}s drawing buffer to the parent buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUiObj_a971a1603791c51302ee1af4254ec0bd9}{pack\+To\+Grey}} (struct \mbox{\hyperlink{structarea}{area}} render\+Area)
+\begin{DoxyCompactList}\small\item\em Pack the object to the screen buffer. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classUiObj_a42bfbf75012743d971ecc4061ebc842e}{grey\+To\+Colour16}} (int grey)
+\begin{DoxyCompactList}\small\item\em Convert a 4-\/bit greyscale value to a 16-\/bit colour value Useful for drawing with the TFT\+\_\+e\+Sprite library functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUiObj_a341c76eb2f3d14c8e05be27f1f4b466e}\label{classUiObj_a341c76eb2f3d14c8e05be27f1f4b466e}} 
+int {\bfseries x}
+\item 
+\mbox{\Hypertarget{classUiObj_a3823aa8de47bac855bba5dcf96c3fa92}\label{classUiObj_a3823aa8de47bac855bba5dcf96c3fa92}} 
+int {\bfseries y}
+\item 
+\mbox{\Hypertarget{classUiObj_a90f5ea2239466d0db51d33a259b638e4}\label{classUiObj_a90f5ea2239466d0db51d33a259b638e4}} 
+int {\bfseries width}
+\item 
+\mbox{\Hypertarget{classUiObj_ae2a8bfcc41fc54613c16784b69a05ce4}\label{classUiObj_ae2a8bfcc41fc54613c16784b69a05ce4}} 
+int {\bfseries height}
+\item 
+\mbox{\Hypertarget{classUiObj_aada0ef88b59f74871ae5cd4dccc0a005}\label{classUiObj_aada0ef88b59f74871ae5cd4dccc0a005}} 
+\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$ {\bfseries parent} = NULL
+\item 
+\mbox{\Hypertarget{classUiObj_ada28e792ad0a43331f9fe3e0f360791a}\label{classUiObj_ada28e792ad0a43331f9fe3e0f360791a}} 
+TFT\+\_\+e\+Sprite {\bfseries surface} = NULL
+\item 
+\mbox{\Hypertarget{classUiObj_ad14482cc135d662d71ecc32aae950717}\label{classUiObj_ad14482cc135d662d71ecc32aae950717}} 
+bool {\bfseries updated} = false
+\item 
+\mbox{\Hypertarget{classUiObj_ab71d68decb2543e99cf933446851ce88}\label{classUiObj_ab71d68decb2543e99cf933446851ce88}} 
+bool {\bfseries exposed} = false
+\item 
+\mbox{\Hypertarget{classUiObj_a082e408a8690dc3803134cf2f05db360}\label{classUiObj_a082e408a8690dc3803134cf2f05db360}} 
+bool {\bfseries hardware\+Draw} = false
+\item 
+\mbox{\Hypertarget{classUiObj_a1d8194b28ce0a5fcc77b4142705e348a}\label{classUiObj_a1d8194b28ce0a5fcc77b4142705e348a}} 
+bool {\bfseries unbuffered} = true
+\item 
+\mbox{\Hypertarget{classUiObj_aac1052173eb3cfa8873267d5093bdddb}\label{classUiObj_aac1052173eb3cfa8873267d5093bdddb}} 
+bool {\bfseries visible} = true
+\item 
+\mbox{\Hypertarget{classUiObj_a90450056acd6f48be1fa03cd600acc41}\label{classUiObj_a90450056acd6f48be1fa03cd600acc41}} 
+bool {\bfseries initialised} = false
+\item 
+\mbox{\Hypertarget{classUiObj_a6f83b3875977d18a5e48643bfad663c4}\label{classUiObj_a6f83b3875977d18a5e48643bfad663c4}} 
+bool {\bfseries visibility\+Changed} = false
+\item 
+\mbox{\Hypertarget{classUiObj_ac4980dbdbcb08c25c5931c7191fc9432}\label{classUiObj_ac4980dbdbcb08c25c5931c7191fc9432}} 
+bool {\bfseries new\+Parent} = false
+\item 
+\mbox{\Hypertarget{classUiObj_a578f4ee67a02247b7bf066d9a45fd67f}\label{classUiObj_a578f4ee67a02247b7bf066d9a45fd67f}} 
+bool {\bfseries drawn} = false
+\item 
+\mbox{\Hypertarget{classUiObj_acd1a9448bba87bc2b013a9b50edd5b36}\label{classUiObj_acd1a9448bba87bc2b013a9b50edd5b36}} 
+enum layer\+\_\+t {\bfseries layer} = LAYER\+\_\+\+CENTRE
+\item 
+\mbox{\Hypertarget{classUiObj_a5fa7a8e0b8a9a93b0f90ae083d68d015}\label{classUiObj_a5fa7a8e0b8a9a93b0f90ae083d68d015}} 
+struct \mbox{\hyperlink{structarea}{area}} {\bfseries update\+Area}
+\item 
+\mbox{\Hypertarget{classUiObj_ad2d9679c999bfc163a70050e5acc3ccc}\label{classUiObj_ad2d9679c999bfc163a70050e5acc3ccc}} 
+struct \mbox{\hyperlink{structarea}{area}} {\bfseries expose\+Area}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUiObj_af1b87c2b663b8bf34824996e2b8fc67b}\label{classUiObj_af1b87c2b663b8bf34824996e2b8fc67b}} 
+\index{UiObj@{UiObj}!copyToParent@{copyToParent}}
+\index{copyToParent@{copyToParent}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{copyToParent()}{copyToParent()}}
+{\footnotesize\ttfamily void Ui\+Obj\+::copy\+To\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copies the object\textquotesingle{}s drawing buffer to the parent buffer. 
+
+Used for drawing objects inside containers. \mbox{\Hypertarget{classUiObj_ae7a0a85c8e412e28633c154e73cd61ef}\label{classUiObj_ae7a0a85c8e412e28633c154e73cd61ef}} 
+\index{UiObj@{UiObj}!createBuffer@{createBuffer}}
+\index{createBuffer@{createBuffer}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{createBuffer()}{createBuffer()}}
+{\footnotesize\ttfamily void Ui\+Obj\+::create\+Buffer (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a buffer for the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The pixel width of the buffer. \\
+\hline
+{\em height} & The pixel height of the buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUiObj_ac138b4a84adf207b439341a315c31e63}\label{classUiObj_ac138b4a84adf207b439341a315c31e63}} 
+\index{UiObj@{UiObj}!draw@{draw}}
+\index{draw@{draw}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Ui\+Obj\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Drawing method for the object. 
+
+This method should draw the object to the screen buffer. The property this-\/$>$surface is a TFT\+\_\+e\+Sprite object that can be using to draw on. The child class must implement this. 
+
+Implemented in \mbox{\hyperlink{classUiImage_aaac66b86a5cc8d998b9153885250cb56}{Ui\+Image}}, \mbox{\hyperlink{classUiLabel_ae02c976dfe5226384f696c4f147f51c3}{Ui\+Label}}, \mbox{\hyperlink{classUiHwImage_a105e2763bc9ffda64da84c078a15ee05}{Ui\+Hw\+Image}}, and \mbox{\hyperlink{classUiFrame_ab235048467d0de94f7490ad0053219fa}{Ui\+Frame}}.
+
+\mbox{\Hypertarget{classUiObj_a69376a9dd3823c4dd52a4e834e9eede2}\label{classUiObj_a69376a9dd3823c4dd52a4e834e9eede2}} 
+\index{UiObj@{UiObj}!expose@{expose}}
+\index{expose@{expose}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{expose()}{expose()}}
+{\footnotesize\ttfamily virtual void Ui\+Obj\+::expose (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarea}{area}}}]{x\+Area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when part of an object is uncovered and its buffer needs to be rerendered to the parent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Area} & A struct containing the area of the object that needs to be redrawn. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classUiFrame_a8d50fca5f31f03c70a21c32378aa330d}{Ui\+Frame}}.
+
+\mbox{\Hypertarget{classUiObj_a541f69eef8818753d69630c1d296df79}\label{classUiObj_a541f69eef8818753d69630c1d296df79}} 
+\index{UiObj@{UiObj}!getAbsolutePos@{getAbsolutePos}}
+\index{getAbsolutePos@{getAbsolutePos}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{getAbsolutePos()}{getAbsolutePos()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarea}{area}} Ui\+Obj\+::get\+Absolute\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the absolute position of an object on the screen. 
+
+\begin{DoxyReturn}{Returns}
+An area struct with the X and Y co-\/ordinates. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUiObj_a34edbdbe79416ac6b03c1a7b99a7cea0}\label{classUiObj_a34edbdbe79416ac6b03c1a7b99a7cea0}} 
+\index{UiObj@{UiObj}!getArea@{getArea}}
+\index{getArea@{getArea}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarea}{area}} Ui\+Obj\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts the object properties to an area struct. 
+
+\begin{DoxyReturn}{Returns}
+An area struct with the object area. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUiObj_a65d6d8e4fc94b7a0052c1909d8740426}\label{classUiObj_a65d6d8e4fc94b7a0052c1909d8740426}} 
+\index{UiObj@{UiObj}!getUpdateArea@{getUpdateArea}}
+\index{getUpdateArea@{getUpdateArea}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{getUpdateArea()}{getUpdateArea()}}
+{\footnotesize\ttfamily virtual struct \mbox{\hyperlink{structarea}{area}} Ui\+Obj\+::get\+Update\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Finds the area on the object that has been updated and returns it. The child class must implement this. 
+
+\begin{DoxyReturn}{Returns}
+struct area 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUiHwImage_a391f0b3f04c00ebd63cd17641cebc120}{Ui\+Hw\+Image}}, \mbox{\hyperlink{classUiImage_a9ebd44d66da6bc5d31e39032985d97f5}{Ui\+Image}}, \mbox{\hyperlink{classUiLabel_a2344d8ea1ad9a37845d0837923766b65}{Ui\+Label}}, and \mbox{\hyperlink{classUiFrame_a90ecdeade8ad710e596bcf0f4671dba6}{Ui\+Frame}}.
+
+\mbox{\Hypertarget{classUiObj_a42bfbf75012743d971ecc4061ebc842e}\label{classUiObj_a42bfbf75012743d971ecc4061ebc842e}} 
+\index{UiObj@{UiObj}!greyToColour16@{greyToColour16}}
+\index{greyToColour16@{greyToColour16}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{greyToColour16()}{greyToColour16()}}
+{\footnotesize\ttfamily uint16\+\_\+t Ui\+Obj\+::grey\+To\+Colour16 (\begin{DoxyParamCaption}\item[{int}]{grey }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert a 4-\/bit greyscale value to a 16-\/bit colour value Useful for drawing with the TFT\+\_\+e\+Sprite library functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grey} & A four-\/bit greyscale value. 0 is black, 15 is white. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 16-\/bit 565 formatted colour value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUiObj_a18070d33057d779266f830948863390d}\label{classUiObj_a18070d33057d779266f830948863390d}} 
+\index{UiObj@{UiObj}!isUpdated@{isUpdated}}
+\index{isUpdated@{isUpdated}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{isUpdated()}{isUpdated()}}
+{\footnotesize\ttfamily virtual bool Ui\+Obj\+::is\+Updated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if the object has been updated since the last render. 
+
+This function is used to determine if the object needs to be redrawn. The function should be overridden by child classes to check for changes to the object. \begin{DoxyReturn}{Returns}
+True if the object has been updated. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUiHwImage_a962cd6b0785de97d8b7cfbc6dc974a42}{Ui\+Hw\+Image}}, \mbox{\hyperlink{classUiImage_afd4ce82cec11914eab76e8c75382bd4d}{Ui\+Image}}, \mbox{\hyperlink{classUiFrame_aaa1c7e029bb11c54ad2b359dfbed8f5d}{Ui\+Frame}}, and \mbox{\hyperlink{classUiLabel_a67c540d51482407dab47c0dda117f5d8}{Ui\+Label}}.
+
+\mbox{\Hypertarget{classUiObj_a6aadbcd237b37c23f127198b5985a66d}\label{classUiObj_a6aadbcd237b37c23f127198b5985a66d}} 
+\index{UiObj@{UiObj}!move@{move}}
+\index{move@{move}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Ui\+Obj\+::move (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{bool}]{relative = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the object position within it\textquotesingle{}s container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x position of the object. \\
+\hline
+{\em y} & The y position of the object. \\
+\hline
+{\em relative} & If true the position is relative to the current position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUiObj_a0573c07c8f161d2a2230a4f1759c284b}\label{classUiObj_a0573c07c8f161d2a2230a4f1759c284b}} 
+\index{UiObj@{UiObj}!offsetToParent@{offsetToParent}}
+\index{offsetToParent@{offsetToParent}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{offsetToParent()}{offsetToParent()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarea}{area}} Ui\+Obj\+::offset\+To\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the position of the object relative to its parent. 
+
+\begin{DoxyReturn}{Returns}
+An offset position with the parents co-\/ordinates added. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUiObj_a791b75c0cba4dba12e9e525bcb56b4b4}\label{classUiObj_a791b75c0cba4dba12e9e525bcb56b4b4}} 
+\index{UiObj@{UiObj}!overlap@{overlap}}
+\index{overlap@{overlap}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{overlap()}{overlap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarea}{area}} Ui\+Obj\+::overlap (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarea}{area}}}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find if an area overlaps with the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em area} & The area to check, relative to the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The overlapping area. The size (height and width) will be 0 if there is no overlap. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUiObj_a0db2717d3032cf6e913c5df0045c8bb7}\label{classUiObj_a0db2717d3032cf6e913c5df0045c8bb7}} 
+\index{UiObj@{UiObj}!overlap@{overlap}}
+\index{overlap@{overlap}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{overlap()}{overlap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarea}{area}} Ui\+Obj\+::overlap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$}]{other\+Obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds if two objects overlap on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+Obj} & The object to check against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The overlapping area. The size (height and width) will be 0 if there is no overlap. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUiObj_a971a1603791c51302ee1af4254ec0bd9}\label{classUiObj_a971a1603791c51302ee1af4254ec0bd9}} 
+\index{UiObj@{UiObj}!packToGrey@{packToGrey}}
+\index{packToGrey@{packToGrey}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{packToGrey()}{packToGrey()}}
+{\footnotesize\ttfamily void Ui\+Obj\+::pack\+To\+Grey (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarea}{area}}}]{render\+Area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pack the object to the screen buffer. 
+
+Copies an objects 8-\/bit drawing buffer in the screen buffer transforming it to 4-\/bit greyscale. \mbox{\Hypertarget{classUiObj_a60095c4765baae5714ac6f022137124d}\label{classUiObj_a60095c4765baae5714ac6f022137124d}} 
+\index{UiObj@{UiObj}!render@{render}}
+\index{render@{render}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Ui\+Obj\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draws and visible or changed objects to their surface. 
+
+This function controls the rendering pipeline for \mbox{\hyperlink{classUiObj}{Ui\+Obj}} types and calls the custom \mbox{\hyperlink{classUiObj_ac138b4a84adf207b439341a315c31e63}{draw()}} function if an object is changed. \mbox{\Hypertarget{classUiObj_a997c728f46e901a2c25c0c25a22285fe}\label{classUiObj_a997c728f46e901a2c25c0c25a22285fe}} 
+\index{UiObj@{UiObj}!resetStatus@{resetStatus}}
+\index{resetStatus@{resetStatus}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{resetStatus()}{resetStatus()}}
+{\footnotesize\ttfamily virtual void Ui\+Obj\+::reset\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Resets the flags used to render the object. 
+
+This function is called after the object has been rendered to reset the flags used to render the object. This can be overridden by child classes to reset any additional flags. 
+
+Reimplemented in \mbox{\hyperlink{classUiFrame_a050e44ccb72be87cfe6b626039eeb38a}{Ui\+Frame}}.
+
+\mbox{\Hypertarget{classUiObj_ab2158f6c1b7c0bec39365b1457a4332c}\label{classUiObj_ab2158f6c1b7c0bec39365b1457a4332c}} 
+\index{UiObj@{UiObj}!setParent@{setParent}}
+\index{setParent@{setParent}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{setParent()}{setParent()}}
+{\footnotesize\ttfamily void Ui\+Obj\+::set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUiObj}{Ui\+Obj}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the parent to this object. 
+
+The parent object is the object that contains this object. The object will be drawn to the parent object\textquotesingle{}s buffer. If the parent is NULL then the object will be drawn directly to the screen. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & The containing object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUiObj_af0a98cf43a5eb6468ad72c51a98f8687}\label{classUiObj_af0a98cf43a5eb6468ad72c51a98f8687}} 
+\index{UiObj@{UiObj}!topLevel@{topLevel}}
+\index{topLevel@{topLevel}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{topLevel()}{topLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUiObj}{Ui\+Obj}}$\ast$ Ui\+Obj\+::top\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Follows the parent chain to find the top level object. 
+
+\begin{DoxyReturn}{Returns}
+Ui\+Obj$\ast$ The top level object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUiObj_a484702c2e9f2327de7ad61e04745f796}\label{classUiObj_a484702c2e9f2327de7ad61e04745f796}} 
+\index{UiObj@{UiObj}!touchEvent@{touchEvent}}
+\index{touchEvent@{touchEvent}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{touchEvent()}{touchEvent()}}
+{\footnotesize\ttfamily virtual bool Ui\+Obj\+::touch\+Event (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when the object is touched by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate on the object that was touched. \\
+\hline
+{\em y} & The y coordinate on the object that was touched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUiManager_aff7423aa002e53003609be15cccb05f2}{Ui\+Manager}}, \mbox{\hyperlink{classUiHwImage_a7c0a581bdbaf2c884e040dbed5bc516d}{Ui\+Hw\+Image}}, \mbox{\hyperlink{classUiIcon_aa23ace5b648a2e0917c076a557fdc8e1}{Ui\+Icon}}, \mbox{\hyperlink{classUiImage_aa8cedc1a0f665b570174452f307e2f43}{Ui\+Image}}, \mbox{\hyperlink{classUiButton_ade08c4fcd37638f73598461d1982f3b5}{Ui\+Button}}, \mbox{\hyperlink{classUiLabel_aa77fc29e8eccc8673b58286f47ca3e2b}{Ui\+Label}}, and \mbox{\hyperlink{classUiFrame_a8bd6527bc8b93cda7eec7d55dd481adf}{Ui\+Frame}}.
+
+\mbox{\Hypertarget{classUiObj_ac2830f0645155a17d2a7f8dbb517e036}\label{classUiObj_ac2830f0645155a17d2a7f8dbb517e036}} 
+\index{UiObj@{UiObj}!within@{within}}
+\index{within@{within}!UiObj@{UiObj}}
+\doxysubsubsection{\texorpdfstring{within()}{within()}}
+{\footnotesize\ttfamily virtual bool Ui\+Obj\+::within (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarea}{area}}}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if an area on the parent is within the bounds of an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em area} & The area to check against the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The area is within the object. 
+
+false The area is partially or completely outside the object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main.\+cpp\end{DoxyCompactItemize}

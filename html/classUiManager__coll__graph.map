@@ -1,0 +1,8 @@
+<map id="UiManager" name="UiManager">
+<area shape="rect" id="node1" title=" " alt="" coords="5,427,91,453"/>
+<area shape="rect" id="node2" href="$classUiFrame.html" title=" " alt="" coords="7,261,79,288"/>
+<area shape="rect" id="node6" href="$classUiModal.html" title=" " alt="" coords="65,337,135,364"/>
+<area shape="rect" id="node3" href="$classUiLabel.html" title="A simple label object." alt="" coords="9,185,76,212"/>
+<area shape="rect" id="node4" href="$classUiObj.html" title=" " alt="" coords="15,109,70,136"/>
+<area shape="rect" id="node5" href="$structarea.html" title=" " alt="" coords="19,5,66,32"/>
+</map>
